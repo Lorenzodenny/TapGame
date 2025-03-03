@@ -3,11 +3,29 @@ let obstacles = [];
 let score = 0;
 let gameOver = false;
 
+// function setup() {
+//     let canvas = createCanvas(400, 600);
+//     canvas.parent("game-container");
+//     player = new Player();
+//     frameRate(60);
+// }
+
 function setup() {
-    let canvas = createCanvas(400, 500);
+    let canvasWidth = windowWidth * 0.9; 
+    let canvasHeight = windowHeight * 0.7; 
+
+    let canvas = createCanvas(canvasWidth, canvasHeight);
     canvas.parent("game-container");
+
     player = new Player();
     frameRate(60);
+}
+
+
+function windowResized() {
+    let canvasWidth = windowWidth * 0.9;
+    let canvasHeight = windowHeight * 0.7;
+    resizeCanvas(canvasWidth, canvasHeight);
 }
 
 function draw() {
