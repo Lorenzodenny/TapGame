@@ -4,7 +4,7 @@ let score = 0;
 let gameOver = false;
 
 function setup() {
-    let canvas = createCanvas(400, 600);
+    let canvas = createCanvas(400, 500);
     canvas.parent("game-container");
     player = new Player();
     frameRate(60);
